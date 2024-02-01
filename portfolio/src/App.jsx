@@ -5,7 +5,7 @@ import SlideShow from "./components/Slideshow";
 import LanguagesTab from "./components/LanguagesTab";
 function App() {
   return (
-    <div className="h-full bg-gradient-to-b from-[#331d2c] via-[#a78295] to-[#efe1d1] ">
+    <div className="h-full bg-[#EADBC8] ">
     <Navbar />
     <AboutMePage/>
     <SlideShow/>

@@ -12,62 +12,65 @@ function SlideShow() {
   };
 
   useEffect(() => {
-    setOpacity(1);},[]);
+    setOpacity(1);
+  }, []);
 
   return (
-    <div className="project-slideshow flex relative justify-center ">
-      <div
-        className="slide-container relative mt-[5vh] mb-[10vh] bg-[#f5deb300] rounded-xl w-[70vw] h-[60vh]  "
-        data-carousel
-      >
-        <button
-          className="carousel-button prev absolute bg-none border-none font-[4rem] top-1/2 z-20 translate-y-[-50%] rounded-sm cursor-pointer p-2 bg-[rgba(0,0,0,.1)] hover:bg-[rgba(0,0,0,.2)] hover:text-white focus:bg-[rgba(0,0,0,.2)] focus:text-white focus:outline left-[1rem]"
-          onClick={() => handleButtonClick(-1)}
-        >
-          &#8656;
-        </button>
-        <button
-          className="carousel-button next absolute bg-none border-none font-[4rem] top-1/2 z-20 translate-y-[-50%] rounded-sm cursor-pointer p-2 bg-[rgba(0,0,0,.1)] hover:bg-[rgba(0,0,0,.2)] hover:text-white focus:bg-[rgba(0,0,0,.2)] focus:text-white right-[1rem] focus:outline"
-          onClick={() => handleButtonClick(1)}
-        >
-          &#8658;
-        </button>
+    <div className=" ml-[12.5vw] h-[65vh] w-[75vw] outline  ">
+      <div className="w-full ">
+        <h2 className="text-center text-[2rem] font-bold font-title">My Projects</h2>
+      </div>
+      <div className=" flex flex-row h-full w-full justify-evenly">
+        <div className="flex flex-col w-[20vw] outline mt-10 mb-20 rounded-md">
+          <div className="text-center outline text-[2rem] font-subtitle">
+            <h2>Virtual Pet</h2>
+          </div>
+          <div className=" outline h-[35vh] p-7">
+            <img src={virtualPet} className=" h-full w-full  rounded-2xl" />
+          </div>
+          <div className="outline text-[1.48rem] mt-1 font-body">
+            <p className="">
+              {" "}
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+              iste magni odit perspiciatis illum sit laborum. Voluptas,
+              consequuntur sequi fugit sint in odit iste id! Visit  <span><a className="underline" href="">here</a></span> 
+            </p>
+          </div>
+        </div>
 
-        <ul data-slides className="m-0 p-0 relative h-full">
-          <li
-            className={`slide absolute  inset-0 opacity-${opacity} transition-opacity ease-in-out delay-200 duration-[200ms]  ${
-              activeIndex === 0 ? "active" : "opacity-0"
-            }`}
-          >
-            <img
-              src={virtualPet}
-              alt="virtual-pet"
-              className="h-full w-full object-fill "
-            />
-          </li>
-          <li
-            className={`slide absolute inset-0 opacity-${opacity} transition-opacity ease-in-out delay-200 duration-[200ms] ${
-              activeIndex === 1 ? "active" : "opacity-0"
-            }`}
-          >
-            <img
-              src={noteTaking}
-              alt="Note-taking"
-              className="h-full w-full object-fill"
-            />
-          </li>
-          <li
-            className={`slide absolute inset-0 opacity-${opacity}  transition-opacity ease-in-out delay-200 duration-[200ms] ${
-              activeIndex === 2 ? "active" : "opacity-0"
-            }`}
-          >
-            <img
-              src={NasaJac}
-              alt="Jac Enterprises"
-              className="h-full w-full object-fill"
-            />
-          </li>
-        </ul>
+        <div className="flex flex-col w-[20vw] outline mt-10 mb-20 rounded-md text">
+          <div className="text-center outline text-[2rem] font-subtitle">
+            <h2>Jac Enterprise</h2>
+          </div>
+          <div className=" outline h-[35vh] p-7">
+            <img src={NasaJac} className=" h-full w-full  rounded-2xl" />
+          </div>
+          <div className="outline text-[1.48rem] mt-1 font-body ">
+            <p>
+              {" "}
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+              iste magni odit perspiciatis illum sit laborum. Voluptas,
+              consequuntur sequi fugit sint in odit iste id! Visit  <span><a className="underline" href="">here</a></span> 
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-col w-[20vw] outline mt-10 mb-20 rounded-md">
+          <div className="text-center outline text-[2rem] font-subtitle">
+            <h2>Note Taking</h2>
+          </div>
+          <div className=" outline h-[35vh] p-7">
+            <img src={noteTaking} className=" h-full w-full  rounded-2xl" />
+          </div>
+          <div className="outline text-[1.48rem] mt-1 font-body ">
+            <p>
+              {" "}
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+              iste magni odit perspiciatis illum sit laborum. Voluptas,
+              consequuntur sequi fugit sint in odit iste id! Visit  <span><a className="underline" href="">here</a></span> 
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
